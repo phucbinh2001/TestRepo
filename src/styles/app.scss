@@ -1,0 +1,211 @@
+:root {
+  --primary: #3ec487;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  margin-bottom: 5em;
+}
+
+.navbar {
+  margin-top: 0.5em;
+}
+
+.navbar-brand {
+  img {
+    height: 90px;
+  }
+}
+
+footer {
+  padding: 5em 0 2em;
+  background-size: cover;
+
+  background-repeat: no-repeat;
+
+  section {
+    height: fit-content;
+    min-height: unset;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+#animation {
+  padding-top: 3em;
+  width: 100%;
+  min-height: 500px;
+
+  position: relative;
+  img {
+    position: absolute;
+  }
+
+  #background {
+    animation: pulse;
+    animation-duration: 10s; /* don't forget to set a duration! */
+    animation-iteration-count: infinite;
+    width: 90%;
+    left: 10px;
+    top: 10px;
+  }
+
+  #planet {
+    width: 40%;
+    z-index: 3;
+
+    animation-duration: 1s; /* don't forget to set a duration! */
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+  #dog {
+    width: 60%;
+    z-index: 4;
+    right: 0;
+    bottom: 0;
+
+    animation: wobble;
+    animation-duration: 10s; /* don't forget to set a duration! */
+    animation-iteration-count: infinite;
+  }
+}
+
+.qanda-section {
+  img {
+    width: 70%;
+    margin: auto;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+#fact {
+  margin-top: 5em;
+}
+
+#banner {
+  .content {
+    margin-top: 10em;
+  }
+
+  img {
+    margin-top: 5em;
+    max-width: 450px;
+  }
+}
+
+.countdown-board {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 500px;
+  padding: 5em;
+}
+
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none !important;
+}
+
+#tokenomics {
+  margin-top: 3em;
+}
+
+footer {
+  section {
+    margin-bottom: 0 !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    padding: 1em;
+    margin-bottom: 2em;
+  }
+
+  .navbar {
+    padding: 0 0.5em !important;
+  }
+
+  .navbar-brand {
+    img {
+      height: 60px !important;
+    }
+  }
+
+  .countdown-board {
+    padding: 1em;
+    margin-right: -1em;
+    border-radius: 10px;
+    margin-left: -1em;
+    // background-image: unset !important;
+    height: unset;
+    background: #1ca9b9;
+    background: linear-gradient(0deg, #1ca9b9 0%, #e6e989 100%) !important;
+    margin-bottom: 2em;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block !important;
+  }
+
+  #banner {
+    .content {
+      margin-top: 0;
+    }
+
+    img {
+      margin-top: 0;
+      max-width: 450px;
+    }
+  }
+
+  #animation {
+    transform: translateX(1em);
+    overflow: hidden;
+    min-height: 420px;
+  }
+
+  #dog {
+    width: 80%;
+  }
+
+  .mobile-reverse {
+    flex-direction: column-reverse;
+    display: flex;
+  }
+
+  #tokenomics {
+    min-height: unset;
+  }
+
+  #FAQ {
+    padding-bottom: 1em !important;
+  }
+
+  footer {
+    section {
+      margin-bottom: 0 !important;
+    }
+  }
+}

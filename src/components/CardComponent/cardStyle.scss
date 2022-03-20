@@ -1,0 +1,39 @@
+.card-component {
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  padding: 2em;
+  transition: 0.5s;
+  cursor: pointer;
+  height: 100%;
+
+  .content {
+    position: relative;
+    padding-top: 1em;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 5px;
+      left: 0;
+      top: 0;
+      background-color: var(--primary);
+      border-radius: 20px;
+    }
+  }
+
+  &:hover {
+    background-color: var(--primary);
+
+    .content,
+    h1 {
+      color: #fff;
+    }
+
+    .content {
+      &::after {
+        background-color: #fff;
+      }
+    }
+  }
+}

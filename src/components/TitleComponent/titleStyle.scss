@@ -1,0 +1,25 @@
+.title-component {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 4.17em;
+
+    left: 0;
+    top: -0.5em;
+
+    width: 2.17em;
+    height: 0.3em;
+    border-radius: 57em;
+    background-color: var(--primary);
+  }
+
+  &.center {
+    text-align: center;
+    &::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
